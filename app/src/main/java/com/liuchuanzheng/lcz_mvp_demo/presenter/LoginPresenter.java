@@ -1,7 +1,7 @@
 package com.liuchuanzheng.lcz_mvp_demo.presenter;
 
-import com.liuchuanzheng.lcz_mvp_demo.contract.LoginContract;
-import com.liuchuanzheng.lcz_mvp_demo.model.LoginModel;
+import com.liuchuanzheng.lcz_mvp_demo.contract.ILoginContract;
+import com.liuchuanzheng.lcz_mvp_demo.model.LoginIModel;
 import com.liuchuanzheng.lcz_mvp_demo.model.listener.LoginListener;
 
 /**
@@ -12,21 +12,17 @@ import com.liuchuanzheng.lcz_mvp_demo.model.listener.LoginListener;
  * 注意事项:
  */
 
-public class LoginPresenter implements LoginContract.Presenter {
-    private LoginContract.View view;
-    @Override
-    public void doWork() {
+public class LoginPresenter implements ILoginContract.IPresenter {
+    private ILoginContract.IView view;
 
-    }
-
-    public LoginPresenter(LoginContract.View view) {
+    public LoginPresenter(ILoginContract.IView view) {
         this.view = view;
         view.setPresenter(this);
     }
 
     @Override
     public void login(String username) {
-        LoginModel model = new LoginModel();
+        LoginIModel model = new LoginIModel();
         view.showLoading();
         model.login(username, new LoginListener() {
             @Override

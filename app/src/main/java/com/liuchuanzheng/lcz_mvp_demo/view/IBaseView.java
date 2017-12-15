@@ -8,7 +8,7 @@ package com.liuchuanzheng.lcz_mvp_demo.view;
  * 注意事项:
  */
 
-public interface BaseView<T> {
+public interface IBaseView<T> {
     /**
      * @param presenter
      * 给view设置presenter,便于调用

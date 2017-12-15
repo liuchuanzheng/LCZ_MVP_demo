@@ -2,7 +2,7 @@ package com.liuchuanzheng.lcz_mvp_demo.model;
 
 import android.os.Handler;
 
-import com.liuchuanzheng.lcz_mvp_demo.contract.LoginContract;
+import com.liuchuanzheng.lcz_mvp_demo.contract.ILoginContract;
 import com.liuchuanzheng.lcz_mvp_demo.model.listener.LoginListener;
 
 /**
@@ -13,11 +13,8 @@ import com.liuchuanzheng.lcz_mvp_demo.model.listener.LoginListener;
  * 注意事项:
  */
 
-public class LoginModel implements LoginContract.Medel {
+public class LoginIModel implements ILoginContract.IModel {
     @Override
-    public void doWork() {
-
-    }
     public void login(final String username, final LoginListener listener){
         new Handler().postDelayed(new Runnable() {
             @Override

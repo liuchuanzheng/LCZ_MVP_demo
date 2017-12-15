@@ -8,9 +8,4 @@ package com.liuchuanzheng.lcz_mvp_demo.presenter;
  * 注意事项:
  */
 
-public interface BasePresenter {
-    /**
-     * 每个控制器都会控制去干活,比如加载数据之类的,这里统一叫doWork
-     */
-    void doWork();
-}
+public interface IBasePresenter {}

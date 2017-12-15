@@ -8,9 +8,4 @@ package com.liuchuanzheng.lcz_mvp_demo.model;
  * 注意事项:
  */
 
-public interface BaseModel {
-    /**
-     * 去干活
-     */
-    void doWork();
-}
+public interface IBaseModel {}

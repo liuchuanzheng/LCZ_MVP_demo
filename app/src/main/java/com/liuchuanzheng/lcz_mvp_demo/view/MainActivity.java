@@ -1,21 +1,22 @@
-package com.liuchuanzheng.lcz_mvp_demo;
+package com.liuchuanzheng.lcz_mvp_demo.view;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.liuchuanzheng.lcz_mvp_demo.contract.LoginContract;
+import com.liuchuanzheng.lcz_mvp_demo.R;
+import com.liuchuanzheng.lcz_mvp_demo.contract.ILoginContract;
 import com.liuchuanzheng.lcz_mvp_demo.presenter.LoginPresenter;
 
-public class MainActivity extends AppCompatActivity implements LoginContract.View {
+public class MainActivity extends AppCompatActivity implements ILoginContract.IView {
     private Button btn_login;
     private EditText et_username;
     private TextView tv_loginstatus;
-    private LoginContract.Presenter presenter;
+    private ILoginContract.IPresenter presenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -42,7 +43,7 @@ public class MainActivity extends AppCompatActivity implements LoginContract.Vie
     }
 
     @Override
-    public void setPresenter(LoginContract.Presenter presenter) {
+    public void setPresenter(ILoginContract.IPresenter presenter) {
         this.presenter = presenter;
     }
 
